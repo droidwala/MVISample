@@ -25,3 +25,33 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext{
+    minSdkVersion = 16
+    targetSdkVersion = 26
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.3'
+
+    supportLibraryVersion = '27.0.2'
+    constraintLayoutVersion = '1.1.0-beta4'
+    groupieVersion = '1.1.1'
+
+    rxJavaVersion = '2.1.7'
+    rxKotlinVersion = '2.2.0'
+    rxAndroidVersion = '2.0.1'
+    rxBindingVersion = '2.0.0'
+    archComponentsVersion = '1.0.0'
+
+    sqlBriteVersion = '2.0.0'
+
+    daggerVersion = '2.13'
+    jsr305Version = '3.0.1'
+
+    timberVersion = '4.6.0'
+
+    junitVersion = '4.12'
+    mockitoVersion = '1.10.19'
+    powerMockitoVersion = '1.6.2'
+    hamcrestVersion = '1.3'
+
+}
