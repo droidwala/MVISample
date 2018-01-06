@@ -86,5 +86,7 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$rootProject.daggerVersion"
     provided 'org.glassfish:javax.annotation:10.0-b28'
 
+    //Logging and Debugging
+    implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
 
 }
