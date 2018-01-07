@@ -16,8 +16,8 @@ import javax.inject.Singleton
  */
 @Singleton
 class TasksRepository @Inject constructor(
-        val tasksRemoteDataSource: TasksRemoteDataSource,
-        val tasksLocalDataSource: TasksLocalDataSource)
+        @Remote val tasksRemoteDataSource: TasksDataSource,
+        @Local val tasksLocalDataSource: TasksDataSource)
     : TasksDataSource{
 
 
