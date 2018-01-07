@@ -1,4 +1,4 @@
-package com.example.droidwala.mviapp.di
+package com.example.droidwala.mviapp.data.source
 
 import com.example.droidwala.mviapp.data.source.Local
 import com.example.droidwala.mviapp.data.source.Remote

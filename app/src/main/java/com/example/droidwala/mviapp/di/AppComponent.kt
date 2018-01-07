@@ -2,6 +2,7 @@ package com.example.droidwala.mviapp.di
 
 import android.app.Application
 import com.example.droidwala.mviapp.TasksApplication
+import com.example.droidwala.mviapp.data.source.TasksRepositoryModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
