@@ -5,6 +5,7 @@ import com.example.droidwala.mviapp.data.source.TasksDataSource
 import io.reactivex.Completable
 import io.reactivex.Observable
 import io.reactivex.Single
+import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -30,14 +31,15 @@ class TasksRemoteDataSource @Inject constructor() : TasksDataSource{
     }
 
     override fun getTasks(): Single<List<Task>> {
+        Timber.d("Data size is ${tasksServiceData.size}")
         return Observable.fromIterable(tasksServiceData.values)
-                .delay(SERVICE_LATENCY_IN_MILLIS,TimeUnit.SECONDS)
+                .delay(SERVICE_LATENCY_IN_MILLIS,TimeUnit.MILLISECONDS)
                 .toList()
     }
 
     override fun getTask(taskId: String): Single<Task> {
         return Single.just<Task>(tasksServiceData[taskId])
-                .delay(SERVICE_LATENCY_IN_MILLIS,TimeUnit.SECONDS)
+                .delay(SERVICE_LATENCY_IN_MILLIS,TimeUnit.MILLISECONDS)
     }
 
     override fun saveTask(task: Task): Completable {

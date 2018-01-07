@@ -5,4 +5,13 @@
     <color name="colorAccent">#0DA5F3</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
+
+    <!--Shades of black and grey-->
+    <color name="shrug_black">#030303</color>
+    <color name="desert_storm">#f0f0f0</color>
+    <color name="albaster">#FAFAFA</color>
+    <color name="oslo_gray">#969A9E</color>
+    <color name="shark">#2C3035</color>
+    <color name="abbey">#4E5257</color>
+
 </resources>

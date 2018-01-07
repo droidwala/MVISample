@@ -1,9 +1,12 @@
 package com.example.droidwala.mviapp.data.source
 
 import com.example.droidwala.mviapp.data.Task
+import com.example.droidwala.mviapp.data.source.local.TasksLocalDataSource
+import com.example.droidwala.mviapp.data.source.remote.TasksRemoteDataSource
 import io.reactivex.Completable
 import io.reactivex.Observable
 import io.reactivex.Single
+import timber.log.Timber
 import java.util.*
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -13,8 +16,8 @@ import javax.inject.Singleton
  */
 @Singleton
 class TasksRepository @Inject constructor(
-        val tasksRemoteDataSource: TasksDataSource,
-        val tasksLocalDataSource: TasksDataSource)
+        val tasksRemoteDataSource: TasksRemoteDataSource,
+        val tasksLocalDataSource: TasksLocalDataSource)
     : TasksDataSource{
 
 
@@ -39,6 +42,8 @@ class TasksRepository @Inject constructor(
                         cachedTasks.put(task.id,task)
                     }.toList()
                 }
+                .doOnSuccess { cacheIsDirty = false }
+
     }
 
     override fun getTasks(): Single<List<Task>> {

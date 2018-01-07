@@ -13,6 +13,13 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables{
+            useSupportLibrary = true
+        }
+    }
+
+    dataBinding{
+        enabled = true
     }
 
     compileOptions{
@@ -49,6 +56,8 @@ android {
             events 'passed','skipped','failed','standardOut','standardError'
         }
     }
+
+
 
 }
 
@@ -88,5 +97,7 @@ dependencies {
 
     //Logging and Debugging
     implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
+
+    kapt 'com.android.databinding:compiler:3.0.0'
 
 }

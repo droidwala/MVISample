@@ -1,5 +1,6 @@
 package com.example.droidwala.mviapp
 
+import com.example.droidwala.mviapp.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 import timber.log.Timber
@@ -17,8 +18,6 @@ class TasksApplication : DaggerApplication(){
     }
 
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
-        TODO()
+        return DaggerAppComponent.builder().application(this).build()
     }
-
-
 }
