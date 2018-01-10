@@ -50,7 +50,8 @@ ext{
     timberVersion = '4.6.0'
 
     junitVersion = '4.12'
-    mockitoVersion = '1.10.19'
+    mockitoVersion = '2.11.0'
+    mockitoKotlinVersion = '1.5.0'
     powerMockitoVersion = '1.6.2'
     hamcrestVersion = '1.3'
 

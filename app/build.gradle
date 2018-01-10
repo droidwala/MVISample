@@ -98,6 +98,12 @@ dependencies {
     //Logging and Debugging
     implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
 
+    //Unit Testing
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    testImplementation "com.nhaarman:mockito-kotlin:$rootProject.mockitoKotlinVersion"
+    testImplementation "org.mockito:mockito-inline:$rootProject.mockitoVersion"
+    testImplementation "org.hamcrest:hamcrest-all:$rootProject.hamcrestVersion"
+
     kapt 'com.android.databinding:compiler:3.0.0'
 
 }
