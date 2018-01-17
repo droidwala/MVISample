@@ -55,4 +55,9 @@ ext{
     powerMockitoVersion = '1.6.2'
     hamcrestVersion = '1.3'
 
+
+    runnerVersion = '0.5'
+    rulesVersion = '0.5'
+    espressoVersion = '3.0.1'
+
 }
